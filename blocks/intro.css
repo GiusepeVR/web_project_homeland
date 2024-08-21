@@ -10,8 +10,10 @@
   font-size: 54px;
   font-style: normal;
   font-weight: 900;
-  line-height: 58px;
+  line-height: 1;
   max-width: 830px;
+  margin-bottom: 40px;
+  margin-top: 0;
 }
 
 .intro__subtitle {
@@ -20,7 +22,7 @@
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 34px;
+  line-height: 1.4;
 }
 
 .intro__author {
@@ -32,7 +34,7 @@
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 34px;
+  line-height: 1.4;
 }
 
 .intro__text {
@@ -40,6 +42,67 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 163%;
+  line-height: 1.63;
   max-width: 722px;
+  margin-top: 32px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    width: calc(100% - 48px);
+  }
+
+  .intro__title {
+    font-size: 45px;
+    line-height: 1.08;
+    max-width: 830px;
+  }
+
+  .intro__subtitle {
+    max-width: 720px;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .intro__author {
+    margin-top: 0px;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .intro__text {
+    font-size: 16px;
+    line-height: 1.63;
+    max-width: 720px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .intro {
+    width: calc(100% - 32px);
+  }
+
+  .intro__title {
+    font-size: 32px;
+    line-height: 1.09;
+    max-width: 288px;
+  }
+
+  .intro__subtitle {
+    max-width: 288px;
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .intro__author {
+    margin-top: 0px;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .intro__text {
+    font-size: 16px;
+    line-height: 1.63;
+    max-width: 288px;
+  }
 }
