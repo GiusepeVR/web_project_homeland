@@ -1,0 +1,133 @@
+.places__content {
+  margin-top: 50px;
+}
+
+.places__title {
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.1;
+  width: calc(100% - 32px);
+  margin: 0 auto;
+}
+
+.places__subtitle {
+  width: calc(100% - 32px);
+  margin: 0 auto;
+}
+
+.places__image {
+  width: 100%;
+}
+
+.places__artist-url {
+  display: block;
+  margin-top: 30px;
+  color: #aaa;
+  text-decoration: none;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+}
+
+.places__artist-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.places__text {
+  width: calc(100% - 32px);
+  margin: 0 auto;
+}
+
+.places__paragraph {
+  margin: 0 16px 25px 0;
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 163%; /* 26.08px */
+}
+
+.places__purchase-button {
+  display: block;
+  width: calc(100% - 32px);
+  height: 48px;
+  margin: 30px auto 50px auto;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #0278fe 0%, #003a7b 100%);
+  color: white;
+  border: 0;
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .places__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 340px 1fr;
+    gap: 28px;
+  }
+
+  .places__title {
+    display: flex;
+    align-self: flex-end;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.1;
+  }
+
+  .places__subtitle {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+
+  .places__image {
+    height: 100%;
+    margin-left: 16px;
+    object-fit: cover;
+  }
+  .places__text {
+    grid-row: 2/4;
+    grid-column: 2/3;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .places {
+    width: calc(100% - 296px);
+    margin: 0 auto;
+  }
+
+  .places__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 460px 1fr;
+    gap: 40px;
+  }
+
+  .places__title {
+    color: #fff;
+    font-family: Inter;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.05;
+  }
+}
