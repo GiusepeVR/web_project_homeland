@@ -93,7 +93,7 @@
 
 @media screen and (min-width: 768px) {
   .places {
-    width: calc(100% - 296px);
+    width: calc(100% - 48px);
     margin: 0 auto;
   }
 
@@ -140,10 +140,15 @@
   .places__purchase-button {
     width: 100%;
     box-shadow: 5px 5px 10px #00000040;
+    max-width: 290px;
+    margin: 48px 0 72px 0;
   }
 }
 
 @media screen and (min-width: 1280px) {
+  .places {
+    width: calc(100% - 296px);
+  }
   .places__content {
     gap: 40px;
   }
@@ -152,5 +157,8 @@
     color: #fff;
     font-size: 72px;
     line-height: 1.05;
+  }
+  .places__purchase-button {
+    margin: 48px 0 80px 0;
   }
 }
