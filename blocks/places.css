@@ -3,9 +3,8 @@
 }
 
 .places__title {
-  font-family: Inter;
+  font-family: "Inter", "Arial", sans-serif;
   font-size: 32px;
-  font-style: normal;
   font-weight: 900;
   line-height: 1.1;
   width: calc(100% - 32px);
@@ -17,8 +16,28 @@
   margin: 0 auto;
 }
 
+.places__image-container {
+  height: 100%;
+  aspect-ratio: 1;
+}
+
 .places__image {
+  height: 100%;
   width: 100%;
+  object-fit: cover;
+  z-index: 9;
+  margin: 30px auto;
+}
+
+.places__image-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 10;
 }
 
 .places__artist-url {
@@ -26,11 +45,9 @@
   margin-top: 30px;
   color: #aaa;
   text-decoration: none;
-  font-family: Inter;
+  font-family: "Inter", "Arial", sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: 1.44px;
   text-transform: uppercase;
 }
@@ -49,11 +66,10 @@
 .places__paragraph {
   margin: 0 16px 25px 0;
   color: #fff;
-  font-family: Inter;
+  font-family: "Inter", "Arial", sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 163%; /* 26.08px */
+  line-height: 1.6;
 }
 
 .places__purchase-button {
@@ -63,53 +79,23 @@
   margin: 30px auto 50px auto;
   border-radius: 4px;
   background: linear-gradient(90deg, #0278fe 0%, #003a7b 100%);
-  color: white;
-  border: 0;
   color: #fff;
+  border: 0;
   text-align: center;
-  font-family: Inter;
+  font-family: "Inter", "Arial", sans-serif;
   font-size: 14px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
+}
+
+.places__purchase-button:hover {
+  background: linear-gradient(
+    rgba(2, 120, 254, 0.25) 0%,
+    rgba(0, 58, 123, 0.25) 99.98%
+  );
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (min-width: 768px) {
-  .places__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 340px 1fr;
-    gap: 28px;
-  }
-
-  .places__title {
-    display: flex;
-    align-self: flex-end;
-    font-family: Inter;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 1.1;
-  }
-
-  .places__subtitle {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-  }
-
-  .places__image {
-    height: 100%;
-    margin-left: 16px;
-    object-fit: cover;
-  }
-  .places__text {
-    grid-row: 2/4;
-    grid-column: 2/3;
-  }
-}
-
-@media screen and (min-width: 1280px) {
   .places {
     width: calc(100% - 296px);
     margin: 0 auto;
@@ -118,16 +104,56 @@
   .places__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 460px 1fr;
+    grid-template-rows: auto auto 1fr;
+    gap: 28px;
+  }
+
+  .places__title {
+    display: flex;
+    align-self: flex-end;
+    width: 100%;
+  }
+
+  .places__subtitle {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    width: 100%;
+  }
+
+  .places__image-container {
+    position: relative;
+  }
+
+  .places__image-overlay:hover {
+    opacity: 1;
+  }
+
+  .places__image {
+    position: absolute;
+    margin: 0 auto;
+    box-shadow: 10px 10px 25px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .places__text {
+    grid-row: 2/4;
+    grid-column: 2/3;
+    width: 100%;
+  }
+
+  .places__purchase-button {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .places__content {
     gap: 40px;
   }
 
   .places__title {
     color: #fff;
-    font-family: Inter;
     font-size: 72px;
-    font-style: normal;
-    font-weight: 900;
     line-height: 1.05;
   }
 }
