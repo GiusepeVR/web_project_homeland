@@ -88,11 +88,7 @@
 }
 
 .places__purchase-button:hover {
-  background: linear-gradient(
-    rgba(2, 120, 254, 0.25) 0%,
-    rgba(0, 58, 123, 0.25) 99.98%
-  );
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(90deg, #0278fe40 0%, #003a7b40 99.98%);
 }
 
 @media screen and (min-width: 768px) {
@@ -143,6 +139,7 @@
 
   .places__purchase-button {
     width: 100%;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
   }
 }
 
