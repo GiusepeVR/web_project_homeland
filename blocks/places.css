@@ -128,7 +128,7 @@
   .places__image {
     position: absolute;
     margin: 0 auto;
-    box-shadow: 10px 10px 25px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
   }
 
   .places__text {
@@ -139,7 +139,7 @@
 
   .places__purchase-button {
     width: 100%;
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 5px 10px #00000040;
   }
 }
 
